@@ -136,5 +136,5 @@ Los contribuidores son bienvenidos a reportar problemas, enviar solicitudes de f
 
 ## Autores:
 
-Este proyecto fue realizado por:Guillermo Verón .
+Este proyecto fue realizado por: Guillermo Verón .
 e-mail: [negoveron@gmail.com](mailto://negoveron@gmail.com)
