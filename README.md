@@ -1,11 +1,10 @@
 <h1 align='center'>
-<b>Análisis de datos: accesos a Internet</b>
-
-![telcom](./data/telcom.jpeg)
+   <b>Análisis de datos: accesos a Internet</b>
 </h1>
 
-
-
+<p align='center'>
+   <img src ="./data/telcom.jpeg">
+</p>
 
 ## Descripción
 
@@ -16,10 +15,9 @@ Este proyecto tiene como objetivo analizar los datos relacionados a las telecomu
 1. [Introducción](#introducción)
 2. [Estructura del Proyecto](#estructura-del-proyecto)
 3. [ETL y EDA](#etl-y-eda)
-4. [Metodología](#metodología)
+4. [Dashboard](#dashboard)
 5. [Resultados y Conclusiones](#resultados-y-conclusiones)
 6. [Contribución y Colaboración](#contribución-y-colaboración)
-7. [Licencia](#licencia)
 
 ## Introducción
 
@@ -31,15 +29,6 @@ Para llevar acabo este proyecto se tomaron los datos disponibles en la web de En
 - Totales Accesos por velocidad
 
 Por otra parte se tomaron datos del dataset [mapa conectividad](https://indicadores.enacom.gob.ar/Files/Datos_Abiertos/mapa_conectividad.xlsx). Del cual se tomó informacion relacionada con la población y la ubicación geográfica.
-
-**Pasos de instalación:**
-
-1. Clonar el repositorio: `git clone https://github.com/usuario/proyecto-ventas-ropa.git`
-2. Crear un entorno virtual: `python -m venv venv`
-3. Activar el entorno virtual:
-   - Windows: `venv\Scripts\activate`
-   - macOS/Linux: `source venv/bin/activate`
-4. Instalar las dependencias: `pip install -r requirements.txt`
 
 ## Estructura del Proyecto
 
@@ -63,6 +52,8 @@ Después de un primer analisis exploratorio de alto nivel se decidió realizar e
 - Se eligió la comuna de CABA mas poblada como centro geográfico y se calculó, como un nuevo campo, la distancia de cada localidad con el "centro".
 - Finalmente se hizo un merge entre ambos datasets, se observó que habia um poco mas de 100 localidades que no matcheaban y resultaron ser aquellas que se habian denominado como 'OTROS'.
 
+---
+
 ### Puntos importantes sobre el EDA:
 
 Se utilizó el dataset obtenido en el ETL para el desarrollo del EDA.
@@ -71,8 +62,8 @@ Se utilizó el dataset obtenido en el ETL para el desarrollo del EDA.
 
 Con respecto al tipo de variable tenemos:
 
-* **Categóricas**: provincia, partido y localidad
-* **Numericas**: todas las demás
+- **Categóricas**: provincia, partido y localidad
+- **Numericas**: todas las demás
 
 #### <u>Estudio de la correlación</u>
 
@@ -84,18 +75,21 @@ La distancia al centro de la capital no señala ninguna correlacion con ninguna 
 
 ![correlación](./data/corr.png)
 
+---
 #### <u>Frecuencia de cada tecnología a nivel Pais</u>
 
 **Se observa claramente que las tecnologías predominantes son Cable Módem y Fibra Óptica con el 87% de las conexiones**
 
 ![frec_pais](./data/frec_pais.png)
 
+---
 #### <u>Relación entre conexiones y población por provincia</u>
 
 **Se observan las provincias que mayor relacion presentan entre cantidad de conexiones y su poblacion, apenas una llega al 50% Se podria pensar que hay mucho por desarrollar**
 
 ![cobertura](./data/cobertura.png)
 
+---
 #### <u>Análisis de las medidas de tendencia central, segmentdas por Localidad, Partido y Provincia</u>
 
 Luego se agruparon los datos por Partido para poder cacular la corbertura desde esa óptica y finalmente se organizaron en una tabla dos datos de las medidas centrales:
@@ -113,9 +107,11 @@ Si bien los nodos de conexión, ya sea una antena, una central tiene una relacio
 * si observamos el coeficiente de variacion, la dispersion aumenta para partidos y provincias
 * Se analizará el promedio de la poblacion de los percentile 70 a 80 para investigar si hay localidades con mayor poblacion y pocas conexiones
 
+---
 #### <u>Localidades objetivos en funcion del análisis del punto anterior</u>
 
 Después de realizar los cálculos correspondientes se obtuvo un listado de localidades con alta población y baja cantidad de conexiones, información disponible en el EDA.
+
 
 ## Dashboard
 
@@ -125,15 +121,18 @@ Este dashboard  fue desarrollado como una herramienta importante que satisface l
 
 ![Dashboard](./data/dashboard.png)
 
+
 ## Resultados y Conclusiones
 
 - El análisis de los datos reveló cuales fueron las texnologías, cuáles fueron las velocidades que mas crecieron de forma global y por localidades.
 - Se identificaron las principales caracteristicas de aquellas localidades donde existe un gran desarrollo del producto.
 - Se propone una lista de ubicaciones geográficas con gran potencial de crecimiento en cuanto al acceso a internet.
 
+
 ## Contribución y Colaboración
 
 Los contribuidores son bienvenidos a reportar problemas, enviar solicitudes de funciones o enviar pull requests en el repositorio de GitHub. Antes de contribuir, por favor revisa las pautas de contribución en el archivo `CONTRIBUTING.md`.
+
 
 ## Autores:
 
